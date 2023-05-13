@@ -1,0 +1,6 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.task-list {
+    background-color: $component-background-colour;
+}

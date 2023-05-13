@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import AnalyticsPage from "./pages/AnalyticsPage";
 import GoalsPage from "./pages/GoalsPage";
+import TasksPage from './pages/TasksPage';
 
 const GoalsURL = "http://localhost:8080/goals";
 
@@ -14,7 +15,6 @@ function App() {
     axios
       .get(`${GoalsURL}`)
       .then(response => {
-        console.log(response);
         setGoalsList(response.data);
       }) 
       .catch(error => {
@@ -28,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<AnalyticsPage />} />
           <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
+          <Route path="/tasks" element={<TasksPage />} />
         </Routes>
       </BrowserRouter>
     </div>
