@@ -4,7 +4,7 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 function Timer() {
-    const [minutes, setMinutes] = useState(25);
+    const [minutes, setMinutes] = useState(1);
     const [seconds, setSeconds] = useState(0);
     const [displayMessage, setDisplayMessage] = useState(false);
     const [isRunning, setIsRunning] = useState(false);
@@ -48,13 +48,13 @@ function Timer() {
     // reset button click handler. sets values back to default when clicked
     const handleResetClick = () => {
         setIsRunning(false);
-        setMinutes(25);
+        setMinutes(1);
         setSeconds(0);
         setDisplayMessage(false);
     };
 
     // calculate the percentage of time remaining for the progress bar
-    const totalTimeInSeconds = 25 * 60;
+    const totalTimeInSeconds = 1 * 60;
     const remainingTimeInSeconds = minutes * 60 + seconds;
     const percentage = Math.round((remainingTimeInSeconds / totalTimeInSeconds) * 100);
 
