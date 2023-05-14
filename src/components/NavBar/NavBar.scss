@@ -1,0 +1,65 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.nav {
+    border: 1px solid $component-background;
+    background-color: $component-background;
+    text-align: center;
+    width: 20rem;
+    // height: 100%;
+    margin: 2rem 0;
+    border-radius: 1rem;
+
+    &__logo {
+        color: $primary-text;
+        font-size: 2rem;
+    }
+
+    &__profilePic {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__username {
+        color: $primary-text;
+        font-size: 1rem;
+        margin-bottom: 4rem;
+    }
+
+    &__icon {
+        color: $primary-text;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    &__category-container {
+        display: flex;
+        flex-direction: column;
+        align-items: first baseline;
+        margin: 2rem 0 22rem 5.5rem;
+    }
+
+    &__category-subcontainer {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+        }
+    }
+
+    &__category {
+        color: $primary-text;
+        font-size: 1.2rem;
+        padding-left: 0.5rem;
+        
+    }
+
+    &__creator {
+        color: $primary-text;
+    }
+}

@@ -2,6 +2,7 @@ import './App.scss';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from './components/NavBar/NavBar';
 import AnalyticsPage from "./pages/AnalyticsPage";
 import GoalsPage from "./pages/GoalsPage";
 import TasksPage from './pages/TasksPage';
@@ -25,11 +26,18 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<AnalyticsPage />} />
-          <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
-          <Route path="/tasks" element={<TasksPage />} />
-        </Routes>
+        <section className='App__container'>
+          <section className='App__nav-container'>
+            <NavBar />
+          </section>
+          <section className='App__page-container'>
+            <Routes>
+              <Route path="/" element={<AnalyticsPage />} />
+              <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
+              <Route path="/tasks" element={<TasksPage />} />
+            </Routes>
+          </section>
+        </section>
       </BrowserRouter>
     </div>
   );
