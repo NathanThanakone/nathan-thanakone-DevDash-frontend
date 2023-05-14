@@ -1,3 +1,4 @@
+import "./TasksList.scss";
 import { useEffect, useState } from 'react';
 import TasksForm from "../TasksForm/TasksForm";
 import Task from "../Task/Task";
@@ -48,12 +49,10 @@ function TasksList() {
     };
 
     return (
-        <div>
-            <section className='taskList'>
-            <h1>What's on the list for today?</h1>
+        <div className='taskList'>
+            <h1 className='taskList__title'>What's on the list for today?</h1>
             <TasksForm onSubmit={addTask} />
             <Task tasks={tasks} completeTask={completeTask} removeTask={removeTask} updateTask={updateTask} />
-            </section>
         </div>
     );
 }

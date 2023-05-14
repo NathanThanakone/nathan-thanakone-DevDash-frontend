@@ -17,6 +17,10 @@
     width: 90%;
     background-color: #173F5F;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &:nth-child(4n + 1) {
         background-color: #20639B;
     }

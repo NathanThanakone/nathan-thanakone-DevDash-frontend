@@ -10,16 +10,16 @@
     &__container {
         display: flex;
         justify-content: space-evenly;
-        height: 100%;
+        align-items: center;
     }
 
     &__nav-container {
         margin: auto;
+        max-height: 100%;
     }
 
     &__page-container {
         margin: auto;
-        // background-color: $component-background;
-        // padding: 2rem;
+        max-height: 100%;
     }
 }
