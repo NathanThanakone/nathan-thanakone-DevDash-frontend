@@ -13,10 +13,11 @@
     min-height: 53rem;
     max-height: 53rem;
     overflow:scroll;
-    width: 80rem;
+    width: 38rem;
 
     &__title {
         font-size: 3rem;
-        color: white;
+        color: $primary-text;
+        text-align: center;
     }
 }

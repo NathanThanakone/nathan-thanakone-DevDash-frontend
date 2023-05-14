@@ -15,9 +15,9 @@ function NavBar() {
                 <div className="nav__category-subcontainer">
                     <Link to="/" className="nav__icon--link"><MdSpaceDashboard className="nav__icon"/><span className="nav__category">Dashboard</span></Link>
                 </div>
-                <div className="nav__category-subcontainer">
+                {/* <div className="nav__category-subcontainer">
                     <Link to="/tasks" className="nav__icon--link"><BsListTask className="nav__icon"/><span className="nav__category">Tasks</span></Link>
-                </div>
+                </div> */}
                 <div className="nav__category-subcontainer">
                     <Link to="/goals" className="nav__icon--link"><GiAchievement className="nav__icon"/><span className="nav__category">Goals</span></Link>
                 </div>

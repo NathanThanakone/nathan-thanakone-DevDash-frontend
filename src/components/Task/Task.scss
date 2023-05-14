@@ -20,18 +20,31 @@
 
     &:hover {
         cursor: pointer;
+        background-color: rgb(255, 255, 255, 0.1);
     }
 
     &:nth-child(4n + 1) {
         background-color: #20639B;
+        
+        &:hover {
+            background-color: rgb(255, 255, 255, 0.1);
+        }
     }
 
     &:nth-child(4n + 2) {
         background-color: #3CAEA3;
+
+        &:hover {
+            background-color: rgb(255, 255, 255, 0.1);
+        }
     }
 
     &:nth-child(4n + 3) {
         background-color: #ED553B;
+
+        &:hover {
+            background-color: rgb(255, 255, 255, 0.1);
+        }
     }
 
     &__icons {

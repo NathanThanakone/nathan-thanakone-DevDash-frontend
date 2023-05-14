@@ -10,7 +10,7 @@
     border-radius: 1rem;
     background-color: $component-background;
     padding: 2rem;
-    width: 80rem;
+    width: 38rem;
     padding: 2rem;
     margin: 2rem 2rem 2rem 0;
     min-height: 53rem;
@@ -18,7 +18,10 @@
 
     &__message {
         color: $primary-text;
-        font-size: 4rem;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 600;
     }
 
     &__timer {
@@ -29,12 +32,12 @@
     &__buttons {
         display: flex;
         justify-content: center;
-        margin: 2rem;
+        margin: 4rem;
     }
 
     &__start-stop {
         margin: 0 2rem; 
-        width: 6rem;
+        width: 8rem;
         height: 4rem;
         border-radius: 1rem;
         border: none;
@@ -50,7 +53,7 @@
 
     &__reset {
         margin: 0 2rem;
-        width: 6rem;
+        width: 8rem;
         height: 4rem;
         border-radius: 1rem;
         border: none;
