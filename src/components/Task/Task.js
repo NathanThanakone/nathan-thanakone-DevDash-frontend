@@ -19,20 +19,20 @@ function Task({ tasks, completeTask, removeTask, updateTask }) {
 
     return tasks.map((task, index) => (
         <div
-            className={task.isComplete ? 'todo-row complete' : 'todo-row'}
+            className={task.isComplete ? 'taskItem complete' : 'taskItem'}
             key={index}
         >
         <div key={task.id} onClick={() => completeTask(task.id)}>
             {task.text}
         </div>
-        <div className='icons'>
+        <div className='taskItem__icons'>
             <RiCloseCircleLine
                 onClick={() => removeTask(task.id)}
-                className='delete-icon'
+                className='taskItem__delete-icon'
             />
             <TiEdit
                 onClick={() => setEdit({ id: task.id, value: task.text })}
-                className='edit-icon'
+                className='taskItem__edit-icon'
             />
         </div>
         </div>

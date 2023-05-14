@@ -1,0 +1,47 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.35;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.25rem auto;
+    color: $primary-text;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: 90%;
+    background-color: #173F5F;
+
+    &:nth-child(4n + 1) {
+        background-color: #20639B;
+    }
+
+    &:nth-child(4n + 2) {
+        background-color: #3CAEA3;
+    }
+
+    &:nth-child(4n + 3) {
+        background-color: #ED553B;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__edit-icon {
+        color: $primary-text;
+    }
+
+    &__delete-icon {
+        color: $primary-text;
+        margin-right: 0.5rem;
+    }
+}

@@ -48,10 +48,12 @@ function TasksList() {
     };
 
     return (
-        <div className='task-list'>
-            <h1>What's on the list for Today?</h1>
+        <div>
+            <section className='taskList'>
+            <h1>What's on the list for today?</h1>
             <TasksForm onSubmit={addTask} />
             <Task tasks={tasks} completeTask={completeTask} removeTask={removeTask} updateTask={updateTask} />
+            </section>
         </div>
     );
 }

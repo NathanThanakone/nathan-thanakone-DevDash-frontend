@@ -26,13 +26,13 @@ function TasksForm(props) {
         <form onSubmit={handleSubmit} className='task-form'>
             {edit ? (
                 <div>
-                    <input placeholder='Update your task' value={input} onChange={handleChange} name='text' ref={inputRef} className='todo-input edit'/>
-                    <button onClick={handleSubmit} className='todo-button edit'> Update </button>
+                    <input placeholder='Update your task' value={input} onChange={handleChange} name='text' ref={inputRef} className='task-form__input'/>
+                    <button onClick={handleSubmit} className='task-form__button task-form__button--update'> Update </button>
                 </div>
                 ) : (
                 <div>
-                    <input placeholder='Add a new task!' value={input} onChange={handleChange} name='text' className='todo-input' ref={inputRef}/>
-                    <button onClick={handleSubmit} className='todo-button'> Add </button>
+                    <input placeholder='Add a new task!' value={input} onChange={handleChange} name='text' className='task-form__input' ref={inputRef}/>
+                    <button onClick={handleSubmit} className='task-form__button'> Add </button>
                 </div>
             )}
         </form>
