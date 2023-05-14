@@ -9,7 +9,7 @@
     &__input {
         padding: 0.875rem 2rem 0.875rem 1rem;
         border-radius: 0.25rem 0 0 0.25rem;
-        border: 1.5px solid #F6D55C;
+        border: 1.5px solid $primary-button;
         outline: none;
         width: 20rem;
         background: transparent;
@@ -19,15 +19,16 @@
     &__button {
         width: 5rem;
         padding: 1rem;
+        margin-bottom: 2rem;
         border: none;
         border-radius: 0.25rem;
         cursor: pointer;
         outline: none;
         color: $component-background;
-        background-color: #F6D55C;
+        background-color: $primary-button;
 
         &--update {
-            background-color: #0aa5f8;
+            background-color: $secondary-button;
             color: $primary-text;
             padding: 1rem 1.3rem;
         }
