@@ -12,7 +12,7 @@ function WakaCodingActivity({ wakaCodingActivity }) {
             labels: labels,
             datasets: [
                 {
-                    label: 'Total Hours',
+                    label: 'Total Hours/Day',
                     data: values,
                     fill: false,
                     borderColor: 'rgb(75, 192, 192)',

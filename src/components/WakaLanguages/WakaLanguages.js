@@ -3,6 +3,8 @@ import { Pie } from 'react-chartjs-2';
 import Chart from 'chart.js/auto';
 
 function WakaLanguages({ wakaLanguages }) {
+    // colours for pie chart sections and legend
+    const colours = ["#f1e05a", "#c6538c", "#292929", "#16ce40", "#F44D27", "#e34c26", "#dc9658", "#e38c00", "#563d7c", "#0060ac"];
 
     // data used to populate pie chart
     const chartData = {
@@ -10,10 +12,10 @@ function WakaLanguages({ wakaLanguages }) {
         datasets: [
             {
                 data: wakaLanguages.map((item) => item.percent),
-                backgroundColor: wakaLanguages.map((item) => item.color),
+                backgroundColor: colours,
                 borderColor: '#36383e',
-            },
-        ],
+            }
+        ]
     };
 
     return (
@@ -32,8 +34,8 @@ function WakaLanguages({ wakaLanguages }) {
                                 labels: {
                                     color: '#36383e'
                                 }
-                            },
-                          },
+                            }
+                          }
                     }}            
                 />
             </div>

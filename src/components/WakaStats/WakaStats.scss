@@ -3,19 +3,45 @@
 
 .stats {
 
+    &__container {
+
+    }
+
+    &__subcontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &__best-day {
         border: 1px solid $primary-button;
         border-radius: 1rem;
         background-color: $primary-button;
         padding: 1rem;
+        margin-right: 1.5rem;
 
         &--text {
             color: $secondary-component-background
         }
 
-        &--day {
+        &--value {
             font-size: 2rem;
             color: $main-background;
+        }
+    }
+
+    &__daily-average {
+        border: 1px solid $tertiary-component-background;
+        border-radius: 1rem;
+        background-color: $tertiary-component-background;
+        padding: 1rem;
+
+        &--text {
+            color: $secondary-component-background;
+        }
+
+        &--value {
+            font-size: 2rem;
+            color: $secondary-button;
         }
     }
 }
