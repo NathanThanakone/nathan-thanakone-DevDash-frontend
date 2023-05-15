@@ -3,23 +3,50 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './components/NavBar/NavBar';
-import AnalyticsPage from "./pages/AnalyticsPage";
+import DashboardPage from './pages/DashboardPage/DashboardPage';
 import GoalsPage from "./pages/GoalsPage";
 import TimerPage from './pages/TimerPage/TimerPage';
 
-const GoalsURL = "http://localhost:8080/goals";
+const URL = "http://localhost:8080";
 
 function App() {
   const [goalsList, setGoalsList] = useState([]);
+  const [wakaProjects, setWakaProjects] = useState([]); // list of active projects
+  const [wakaCodingActivity, setWakaCodingActivity] = useState([]);
+  const [wakaLanguages, setWakaLanguages] = useState([]);
 
   useEffect(() => {
     axios
-      .get(`${GoalsURL}`)
+      .get(`${URL}/goals`)
       .then(response => {
         setGoalsList(response.data);
       }) 
       .catch(error => {
         console.log(error);
+      })
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${URL}/dashboard/projects`)
+      .then(response => {
+        setWakaProjects(response.data);
+      })
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${URL}/dashboard/codingactivity`)
+      .then(response => {
+        setWakaCodingActivity(response.data);
+      })
+  }, []);
+
+  useEffect(() => {
+    axios
+      .get(`${URL}/dashboard/codinglanguages`)
+      .then(response => {
+        setWakaLanguages(response.data);
       })
   }, []);
 
@@ -32,7 +59,8 @@ function App() {
           </section>
           <section className='App__page-container'>
             <Routes>
-              <Route path="/" element={<AnalyticsPage />} />
+              <Route path="/" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} />} />
+              <Route path="/dashboard" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} />} />
               <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
               <Route path="/timer" element={<TimerPage />} />
             </Routes>

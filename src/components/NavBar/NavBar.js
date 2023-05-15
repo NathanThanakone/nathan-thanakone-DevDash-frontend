@@ -2,7 +2,7 @@ import "./NavBar.scss";
 import { Link } from "react-router-dom";
 import profilePic from "../../assets/images/profilepic.jpeg";
 import { MdSpaceDashboard, MdTimer } from 'react-icons/md';
-import { BsListTask } from 'react-icons/bs';
+// import { BsListTask } from 'react-icons/bs';
 import { GiAchievement } from 'react-icons/gi';
 
 function NavBar() {
