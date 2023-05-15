@@ -28,6 +28,7 @@ function WakaCodingActivity({ wakaCodingActivity }) {
         <div>
             <div className="line-chart">
                 <h1 className="line-chart__title"> Hours Coding over Last 7 Days </h1>
+                {/* line chart component with data and styling */}
                 <Line 
                     data={chartData} 
                     options={{ 

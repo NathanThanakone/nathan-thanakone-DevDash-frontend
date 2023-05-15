@@ -11,7 +11,17 @@
 
     &__container {
         display: flex;
+        // align-items: center;
+    }
+
+    &__subcontainer {
+        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+    }
+
+    &__second-subcontainer {
+        margin: 1.5rem;
+        display: flex;
     }
 }

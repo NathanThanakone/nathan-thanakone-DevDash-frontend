@@ -10,10 +10,13 @@ import TimerPage from './pages/TimerPage/TimerPage';
 const URL = "http://localhost:8080";
 
 function App() {
+
+  // state variables
   const [goalsList, setGoalsList] = useState([]);
-  const [wakaProjects, setWakaProjects] = useState([]); // list of active projects
+  const [wakaProjects, setWakaProjects] = useState([]);
   const [wakaCodingActivity, setWakaCodingActivity] = useState([]);
   const [wakaLanguages, setWakaLanguages] = useState([]);
+  const [wakaStats, setWakaStats] = useState([]);
 
   useEffect(() => {
     axios
@@ -50,6 +53,15 @@ function App() {
       })
   }, []);
 
+  useEffect(() => {
+    axios
+      .get(`${URL}/dashboard/stats`)
+      .then(response => {
+        setWakaStats(response.data);
+        console.log(response.data);
+      })
+  }, []);
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -59,8 +71,8 @@ function App() {
           </section>
           <section className='App__page-container'>
             <Routes>
-              <Route path="/" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} />} />
-              <Route path="/dashboard" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} />} />
+              <Route path="/" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} wakaStats={wakaStats} />} />
+              <Route path="/dashboard" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} wakaStats={wakaStats} />} />
               <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
               <Route path="/timer" element={<TimerPage />} />
             </Routes>

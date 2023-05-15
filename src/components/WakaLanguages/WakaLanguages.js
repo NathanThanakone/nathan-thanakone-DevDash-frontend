@@ -20,6 +20,7 @@ function WakaLanguages({ wakaLanguages }) {
         <div>
             <div className="pie-chart">
                 <h1 className="pie-chart__title"> Languages Used (%) </h1>
+                {/* pie chart component with data and styling */}
                 <Pie 
                     className="pie-chart__chart"
                     data={chartData}

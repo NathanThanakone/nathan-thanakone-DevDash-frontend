@@ -1,0 +1,21 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.stats {
+
+    &__best-day {
+        border: 1px solid $primary-button;
+        border-radius: 1rem;
+        background-color: $primary-button;
+        padding: 1rem;
+
+        &--text {
+            color: $secondary-component-background
+        }
+
+        &--day {
+            font-size: 2rem;
+            color: $main-background;
+        }
+    }
+}

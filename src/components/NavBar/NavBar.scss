@@ -7,8 +7,20 @@
     text-align: center;
     // width: 20rem;
     width: auto; //
-    margin: 1.5rem;
+    margin-right: 1.5rem;
     border-radius: 1rem;
+
+    &__logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo-icon {
+        height: 2rem;
+        width: 2rem;
+        margin-right: 1rem;
+    }
 
     &__logo {
         color: $primary-text;

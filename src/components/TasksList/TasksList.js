@@ -23,7 +23,6 @@ function TasksList() {
 
     // update existing task
     const updateTask = (taskId, newValue) => {
-        // const updatedTask = (task) => task.map(item => (item.id === taskId ? newValue : item));
         const updatedTask = tasks.map(item => (item.id === taskId ? newValue : item));
         localStorage.setItem("tasks", JSON.stringify(updatedTask));
         setTasks(updatedTask);
