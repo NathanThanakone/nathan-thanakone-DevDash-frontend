@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import NavBar from './components/NavBar/NavBar';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
-import GoalsPage from "./pages/GoalsPage";
 import TimerPage from './pages/TimerPage/TimerPage';
 
 const URL = "http://localhost:8080";
@@ -12,22 +11,10 @@ const URL = "http://localhost:8080";
 function App() {
 
   // state variables
-  const [goalsList, setGoalsList] = useState([]);
   const [wakaProjects, setWakaProjects] = useState([]);   // list of projects worked on over last 7 days, data coming from /dashboard/stats axios call, contains time spent on each project
   const [wakaCodingActivity, setWakaCodingActivity] = useState([]);   // time spent coding per day over the past 7 days
   const [wakaLanguages, setWakaLanguages] = useState([]);   // percentage of coding languages used over the past 7 days
   const [wakaStats, setWakaStats] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get(`${URL}/goals`)
-      .then(response => {
-        setGoalsList(response.data);
-      }) 
-      .catch(error => {
-        console.log(error);
-      })
-  }, []);
 
   useEffect(() => {
     axios
@@ -58,7 +45,6 @@ function App() {
             <Routes>
               <Route path="/" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} wakaStats={wakaStats} />} />
               <Route path="/dashboard" element={<DashboardPage wakaProjects={wakaProjects} wakaCodingActivity={wakaCodingActivity} wakaLanguages={wakaLanguages} wakaStats={wakaStats} />} />
-              <Route path="/goals" element={<GoalsPage goalsList={goalsList} />} />
               <Route path="/timer" element={<TimerPage />} />
             </Routes>
           </section>
