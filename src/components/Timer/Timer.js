@@ -59,7 +59,7 @@ function Timer() {
     const percentage = Math.round((remainingTimeInSeconds / totalTimeInSeconds) * 100);
 
     return (
-        <div className="timer">
+        <section className="timer">
             <div className="timer__message">
                 {displayMessage && <div>Time for a break! Back to work in:</div>}
             </div>
@@ -86,7 +86,7 @@ function Timer() {
                     Reset
                 </button>
             </div>
-        </div>
+        </section>
     );
 }
 

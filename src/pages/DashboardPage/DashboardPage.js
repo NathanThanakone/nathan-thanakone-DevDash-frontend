@@ -14,7 +14,7 @@ function DashboardPage({ wakaProjects, wakaCodingActivity, wakaLanguages, wakaSt
                 </div>
                 <div className="dashboard__second-subcontainer">
                     <WakaStats wakaStats={wakaStats} />
-                    <WakaProjects wakaStats={wakaStats}/>
+                    <WakaProjects wakaProjects={wakaProjects}/>
                 </div>
             </div>
         </div>

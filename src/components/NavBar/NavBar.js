@@ -42,7 +42,7 @@ function NavBar() {
                 {showContactModal && (
                     <div className="modal">
                         <div className="modal__info-container">
-                            <h2 className="modal__text">Contact Information</h2>
+                            <h2 className="modal__title">Contact Information</h2>
                             <p className="modal__text">Nathan Thanakone</p>
                             <p className="modal__text">nathan.thanakone@gmail.com</p>
                             <a href="https://github.com/NathanThanakone" target="_blank" rel="noreferrer" className="modal__links">GitHub</a>

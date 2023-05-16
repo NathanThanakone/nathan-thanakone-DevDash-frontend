@@ -13,7 +13,7 @@ function App() {
 
   // state variables
   const [goalsList, setGoalsList] = useState([]);
-  const [wakaProjects, setWakaProjects] = useState([]);
+  const [wakaProjects, setWakaProjects] = useState([]);   // list of projects worked on over last 7 days, data coming from /dashboard/stats axios call, contains time spent on each project
   const [wakaCodingActivity, setWakaCodingActivity] = useState([]);   // time spent coding per day over the past 7 days
   const [wakaLanguages, setWakaLanguages] = useState([]);   // percentage of coding languages used over the past 7 days
   const [wakaStats, setWakaStats] = useState([]);
@@ -31,14 +31,6 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`${URL}/dashboard/projects`)
-      .then(response => {
-        setWakaProjects(response.data);
-      })
-  }, []);
-
-  useEffect(() => {
-    axios
       .get(`${URL}/dashboard/codingactivity`)
       .then(response => {
         setWakaCodingActivity(response.data);
@@ -51,7 +43,7 @@ function App() {
       .then(response => {
         setWakaStats(response.data);
         setWakaLanguages(response.data.languages);
-        console.log(response.data);
+        setWakaProjects(response.data.projects);
       })
   }, []);
 

@@ -5,7 +5,7 @@ import Chart from 'chart.js/auto'; // prevents 'line is not a registered control
 function WakaCodingActivity({ wakaCodingActivity }) {
 
     // data used to populate line chart
-    const transformData = (wakaCodingActivity) => {
+    const dataForChart = (wakaCodingActivity) => {
         const labels = wakaCodingActivity.map((item) => item.range.date);
         const values = wakaCodingActivity.map((item) => item.grand_total.hours + (item.grand_total.minutes / 60));
         return {
@@ -22,12 +22,12 @@ function WakaCodingActivity({ wakaCodingActivity }) {
         };
     }
 
-    const chartData = transformData(wakaCodingActivity);
+    const chartData = dataForChart(wakaCodingActivity);
 
     return (
-        <div>
+        <section>
             <div className="line-chart">
-                <h1 className="line-chart__title"> Hours Coding over Last 7 Days </h1>
+                <h1 className="line-chart__title"> Hours Coding Over Last 7 Days </h1>
                 {/* line chart component with data and styling */}
                 <Line 
                     data={chartData} 
@@ -53,7 +53,7 @@ function WakaCodingActivity({ wakaCodingActivity }) {
                         }
                     }} />
             </div>
-        </div>
+        </section>
     )
 }
 

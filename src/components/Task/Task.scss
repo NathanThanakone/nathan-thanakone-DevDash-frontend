@@ -15,35 +15,35 @@
     padding: 1rem;
     border-radius: 0.3rem;
     width: 90%;
-    background-color: #173F5F;
+    background-color: $nth-child;
     font-size: 1.2rem;
 
     &:hover {
         cursor: pointer;
-        background-color: rgb(255, 255, 255, 0.1);
+        background-color: $nth-child-hover;
     }
 
     &:nth-child(4n + 1) {
-        background-color: #20639B;
+        background-color: $nth-child1;
         
         &:hover {
-            background-color: rgb(255, 255, 255, 0.1);
+            background-color: $nth-child-hover;
         }
     }
 
     &:nth-child(4n + 2) {
-        background-color: #3CAEA3;
+        background-color: $nth-child2;
 
         &:hover {
-            background-color: rgb(255, 255, 255, 0.1);
+            background-color: $nth-child-hover;
         }
     }
 
     &:nth-child(4n + 3) {
-        background-color: #ED553B;
+        background-color: $nth-child3;
 
         &:hover {
-            background-color: rgb(255, 255, 255, 0.1);
+            background-color: $nth-child-hover;
         }
     }
 

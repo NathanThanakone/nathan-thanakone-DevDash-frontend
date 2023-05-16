@@ -5,7 +5,6 @@
     border: 1px solid $component-background;
     background-color: $component-background;
     text-align: center;
-    // width: 20rem;
     width: auto; //
     margin-right: 1.5rem;
     border-radius: 1rem;
@@ -164,6 +163,7 @@
 
         &:hover {
             cursor: pointer;
+            color: $secondary-button;
         }
     }
 }
@@ -183,8 +183,8 @@
     background-color: $modal-background;
 
     &__info-container {
-        height: 21rem;
-        width: 30rem;
+        height: 22rem;
+        width: 40rem;
         background-color: $secondary-component-background;
         color: $primary-text;
         border-radius: 1rem;
@@ -193,20 +193,34 @@
         justify-content: center;
         align-items: center;
         padding: 2rem;
+        box-shadow: 0.2rem 0.2rem rgba(85, 85, 85, 0.4);
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
     }
 
     &__text {
         margin-top: 0;
         margin-bottom: 1rem;
+        font-size: 1.2rem;
     }
 
     &__links {
         text-decoration: none;
-        margin-bottom: 0.5rem;
+        padding: 0.5rem;
         color: $secondary-button;
+        font-size: 1.2rem;
 
         &:visited {
             color: $secondary-button;
+        }
+
+        &:hover {
+            background-color: $dark-nav-hover;
+            border-radius: 1rem;
         }
     }
 
@@ -216,11 +230,13 @@
         background-color: $primary-button;
         padding: 1rem;
         margin-top: 1rem;
-        width: 5rem;
+        width: 8rem;
         color: $component-background;
+        font-size: 1rem;
 
         &:hover {
             cursor: pointer;
+            background-color: rgba(246, 224, 147, 0.95);
         }
     }
 }

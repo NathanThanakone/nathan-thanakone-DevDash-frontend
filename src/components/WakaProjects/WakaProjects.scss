@@ -8,4 +8,66 @@
     width: 100%;
     height: 100%;
     margin-top: 1.5rem;
+    padding: 1rem;
+    overflow: scroll;
+
+    &__title {
+        color: $primary-text;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: $dim-nth-child;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+
+        &:hover {
+            background-color: $nth-child-hover;
+            cursor: pointer;
+        }
+
+        &:nth-child(4n + 1) {
+            background-color: $dim-nth-child1;
+            
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    
+        &:nth-child(4n + 2) {
+            background-color: $dim-nth-child2;
+    
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    
+        &:nth-child(4n + 3) {
+            background-color: $dim-nth-child3;
+    
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    }
+
+    &__name {
+        color: $primary-text;
+        width: 18rem;
+    }
+
+    &__time {
+        color: $primary-text;
+        width: 14rem;
+        
+        &--text {
+            color: $secondary-button;
+            margin-right: 0.5rem;
+        }
+    }
 }

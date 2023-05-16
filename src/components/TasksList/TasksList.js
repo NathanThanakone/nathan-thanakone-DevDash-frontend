@@ -48,11 +48,11 @@ function TasksList() {
     };
 
     return (
-        <div className='taskList'>
+        <section className='taskList'>
             <h1 className='taskList__title'>What's on the list for today?</h1>
             <TasksForm onSubmit={addTask} />
             <Task tasks={tasks} completeTask={completeTask} removeTask={removeTask} updateTask={updateTask} />
-        </div>
+        </section>
     );
 }
 

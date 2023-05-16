@@ -7,6 +7,7 @@ function TasksForm(props) {
     const [input, setInput] = useState(edit ? edit.value : '');
     const inputRef = useRef(null);
 
+    // auto focus input field when page loads
     useEffect(() => {
         inputRef.current.focus();
     });
@@ -15,10 +16,14 @@ function TasksForm(props) {
         setInput(event.target.value);
     };
 
+    // submit handler to create new task object
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        onSubmit({ id: v4(), text: input});
+        onSubmit({ 
+            id: v4(), 
+            text: input
+        });
         setInput('');
     };
 
@@ -29,7 +34,7 @@ function TasksForm(props) {
                     <input placeholder='Update your task' value={input} onChange={handleChange} name='text' ref={inputRef} className='task-form__input'/>
                     <button onClick={handleSubmit} className='task-form__button task-form__button--update'> Update </button>
                 </div>
-                ) : (
+            ) : (
                 <div>
                     <input placeholder='Add a new task!' value={input} onChange={handleChange} name='text' className='task-form__input' ref={inputRef}/>
                     <button onClick={handleSubmit} className='task-form__button'> Add </button>

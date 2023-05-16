@@ -4,7 +4,7 @@ function WakaStats({ wakaStats }) {
     const { best_day, human_readable_daily_average, human_readable_total } = wakaStats;
 
     return (
-        <div className="stats">
+        <section className="stats">
             <div className="stats__container">
                 <div className="stats__subcontainer">
                     {best_day && 
@@ -26,7 +26,7 @@ function WakaStats({ wakaStats }) {
                     }
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
