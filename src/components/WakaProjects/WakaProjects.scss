@@ -15,12 +15,13 @@
         color: $primary-text;
         font-size: 1.5rem;
         margin-top: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
     }
 
     &__item {
         display: flex;
         justify-content: space-evenly;
+        align-items: center;
         background-color: $dim-nth-child;
         border-radius: 1rem;
         margin-bottom: 1rem;
@@ -58,16 +59,15 @@
 
     &__name {
         color: $primary-text;
+        font-size: 1.1rem;
         width: 18rem;
+        margin-right: 3rem;
     }
 
     &__time {
-        color: $primary-text;
-        width: 14rem;
-        
-        &--text {
-            color: $secondary-button;
-            margin-right: 0.5rem;
-        }
+        color: $secondary-button;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 8rem;
     }
 }

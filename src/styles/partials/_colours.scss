@@ -17,17 +17,17 @@ $dark-nav-hover: #ffffff33;
 $light-nav-hover: #ffffff4d;
 
 // modal background
-$modal-background: rgba(0, 0, 0, 0.6); // black w/60% opacity
+$modal-background: rgba(0, 0, 0, 0.7); // black w/70% opacity
 
 // nth child background colours
 $nth-child: #173F5F;
 $nth-child1: #20639B;
 $nth-child2: #3CAEA3;
 $nth-child3: #ED553B;
-$nth-child-hover:rgb(255, 255, 255, 0.1);
+$nth-child-hover:#ffffff1a;
 
 // nth child background w/opacity
-$dim-nth-child: rgb(23, 63, 95, 0.5);
-$dim-nth-child1: rgb(32, 99, 155, 0.5);
-$dim-nth-child2: rgb(60, 174, 163, 0.5);
-$dim-nth-child3: rgb(237, 85, 59, 0.5);
+$dim-nth-child: #173f5f80;
+$dim-nth-child1: #20639b80;
+$dim-nth-child2: #3caea380;
+$dim-nth-child3: #ed553b80;

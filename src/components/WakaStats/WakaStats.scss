@@ -21,11 +21,13 @@
         min-width: 15rem;
 
         &--text {
-            color: $secondary-component-background
+            color: $secondary-component-background;
+            font-weight: 600;
         }
 
         &--value {
             font-size: 2rem;
+            font-weight: 600;
             color: $main-background;
         }
     }
@@ -39,10 +41,12 @@
 
         &--text {
             color: $secondary-component-background;
+            font-weight: 600;
         }
 
         &--value {
             font-size: 2rem;
+            font-weight: 600;
             color: $secondary-button;
         }
     }

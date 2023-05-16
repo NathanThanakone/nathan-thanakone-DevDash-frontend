@@ -6,11 +6,11 @@ function WakaProjects({ wakaProjects }) {
 
     return (
         <section className="projects">
-            <h1 className="projects__title">Recent Projects</h1>
+            <h1 className="projects__title">Recent Projects This Week</h1>
             {wakaProjects.map((item, index) => (
                 <div key={index} className="projects__item">
                     <p className="projects__name">{item.name}</p>
-                    <p className="projects__time"><span className="projects__time--text">{item.text}</span>spent coding!</p>
+                    <p className="projects__time">{item.text}</p>
                 </div>
             ))}; 
         </section>
