@@ -1,70 +1,77 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# DevDash
 
-## Available Scripts
+DevDash is designed to provide developers with an overview of their coding activities and progress while also providing a section for focus and productivity. The app displays various statistics and metrics such as time spent programming, recently worked on projects, and languages used. These metrics are tied to the specific code editor used, for example, VS Code. Overall the dashboard is a useful tool for keeping track of progress and helps stay focused on important tasks.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dashboard with stats on how much time is spent in your choice of code editor that is compatible with the WakaTime extension https://wakatime.com/plugins
+- Pomodoro Timer
+- Task List
+## Tech Stack
 
-### `npm test`
+**Client:** React, HTML5, SCSS, JavaScript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Server:** Node, Express
 
-### `npm run build`
+**API:** WakaTime - https://wakatime.com/
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Libraries:** Chart.js/react-chartjs-2, React-Icons, React-Circular-Progressbar, Axios, UUID
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+https://www.chartjs.org/  
+https://react-chartjs-2.js.org/  
+https://react-icons.github.io/react-icons/  
+https://www.npmjs.com/package/react-circular-progressbar  
+https://www.npmjs.com/package/axios  
+https://www.npmjs.com/package/uuid
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ 
+## Demo
 
-### `npm run eject`
+![DevDash Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBjYWExYWNmZTQ2MDRiZDQ0Mzk1NzRiMTg0YmE1ZmM1NjdhNGYxNCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ArvdSlm4y2GUyuDIMH/giphy.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Run Locally
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Please note that DevDash requires the backend Express server in order to run. The server can be found at https://github.com/NathanThanakone/nathan-thanakone-DevDash-backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you wish to connect the app with your code editor to track your own stats, you will need to signup for a WakaTime account at:  
 
-## Learn More
+https://wakatime.com/signup  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+and install the extension for your code editor. Instructions for installing the extension can be found here:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://wakatime.com/plugins
 
-### Code Splitting
+Once an account has been set up, a personal API key will be generated for you and you will need to create a .env file with your API Key on your backend server.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+  git clone https://github.com/NathanThanakone/nathan-thanakone-DevDash-frontend.git
+```
 
-### Making a Progressive Web App
+Go to the project directory
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+  cd nathan-thanakone-DevDash-frontend
+```
 
-### Advanced Configuration
+Install dependencies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+  npm install
+```
 
-### Deployment
+Start the frontend app
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+  npm run start
+```
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Next Steps
+
