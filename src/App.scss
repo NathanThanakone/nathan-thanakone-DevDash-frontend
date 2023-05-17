@@ -10,24 +10,16 @@
         display: flex;
         align-items: center;
         padding: 1.5rem;
-
-        // @include tablet {
-        //     display: block;
-        // }
-
-        // @include desktop {
-        //     display: flex;
-        // }
     }
 
     &__nav-container {
-        max-width: 25rem; // 
-        min-width: 25rem; //
+        max-width: 25rem;
+        min-width: 25rem;
         margin: 0 0;
     }
 
     &__page-container {
         margin: 0 0;
-        flex-grow: 1; // 
+        flex-grow: 1;
     }
 }

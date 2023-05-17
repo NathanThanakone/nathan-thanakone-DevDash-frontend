@@ -2,11 +2,7 @@
 @use "../../styles/partials/typography" as *;
 
 .stats {
-
-    &__container {
-
-    }
-
+    
     &__subcontainer {
         display: flex;
         justify-content: space-between;
