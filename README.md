@@ -33,7 +33,7 @@ https://www.npmjs.com/package/uuid
 ![DevDash Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTBjYWExYWNmZTQ2MDRiZDQ0Mzk1NzRiMTg0YmE1ZmM1NjdhNGYxNCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/ArvdSlm4y2GUyuDIMH/giphy.gif)
 
 
-## Run Locally
+## Setup
 
 Please note that DevDash requires the backend Express server in order to run. The server can be found at https://github.com/NathanThanakone/nathan-thanakone-DevDash-backend
 
@@ -45,8 +45,12 @@ and install the extension for your code editor. Instructions for installing the 
 
 https://wakatime.com/plugins
 
-Once an account has been set up, a personal API key will be generated for you and you will need to create a .env file with your API Key on your backend server.
+Once an account has been created, a personal API key will be generated for you and you will need to create a .env file that contains your API Key on your backend server. Instructions for this can be found on the server repo:
 
+https://github.com/NathanThanakone/nathan-thanakone-DevDash-backend
+
+If you already have your own or someone else's API Key, skip the Setup steps above and move on to the next section, Run Locally.
+## Run Locally
 
 Clone the project
 
@@ -75,3 +79,8 @@ Start the frontend app
 
 ## Next Steps
 
+Future additions to the app may include:
+
+- Making the app reponsive at all screen sizes (mobile, tablet, desktop)
+- Adding user authentication using OAuth so that anyone with a WakaTime account can sign-in to the app using their personal account instead of manually setting the API Key on the server.
+- Add addtional functionality to the dashboard such as a separate page for specific details on active projects. View commits, collaborators, files worked on, etc. 
