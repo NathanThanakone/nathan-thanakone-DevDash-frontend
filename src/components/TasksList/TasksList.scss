@@ -1,0 +1,24 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.taskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid $component-background;
+    background-color: $component-background;
+    padding: 2rem;
+    min-height: 53rem;
+    max-height: 53rem;
+    overflow:scroll;
+    max-width: 39rem;
+    width: auto;
+    flex-grow: 1;
+
+    &__title {
+        font-size: 3rem;
+        color: $primary-text;
+        text-align: center;
+    }
+}

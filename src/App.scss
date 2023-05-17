@@ -1,0 +1,25 @@
+@use "../src/styles/partials/colours" as *;
+@use "../src/styles/partials/typography" as *;
+@use "../src/styles/partials/mixins" as *;
+
+.App {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        padding: 1.5rem;
+    }
+
+    &__nav-container {
+        max-width: 25rem;
+        min-width: 25rem;
+        margin: 0 0;
+    }
+
+    &__page-container {
+        margin: 0 0;
+        flex-grow: 1;
+    }
+}

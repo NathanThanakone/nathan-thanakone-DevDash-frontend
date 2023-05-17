@@ -1,0 +1,73 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.projects {
+    border: 1px solid $secondary-component-background;
+    border-radius: 1rem;
+    background-color: $secondary-component-background;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    overflow: scroll;
+
+    &__title {
+        color: $primary-text;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: $dim-nth-child;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+        padding: 1rem 1.5rem;
+
+        &:hover {
+            background-color: $nth-child-hover;
+            cursor: pointer;
+        }
+
+        &:nth-child(4n + 1) {
+            background-color: $dim-nth-child1;
+            
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    
+        &:nth-child(4n + 2) {
+            background-color: $dim-nth-child2;
+    
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    
+        &:nth-child(4n + 3) {
+            background-color: $dim-nth-child3;
+    
+            &:hover {
+                background-color: $nth-child-hover;
+            }
+        }
+    }
+
+    &__name {
+        color: $primary-text;
+        font-size: 1.1rem;
+        width: 18rem;
+        margin-right: 3rem;
+    }
+
+    &__time {
+        color: $secondary-button;
+        font-size: 1.2rem;
+        font-weight: 600;
+        width: 8rem;
+    }
+}

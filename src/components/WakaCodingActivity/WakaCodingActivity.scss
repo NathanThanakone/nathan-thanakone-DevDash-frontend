@@ -1,0 +1,16 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.line-chart {
+    height: 24rem;
+    width: 35rem;
+    background-color: $secondary-component-background;
+    border-radius: 1rem;
+    padding: 1rem 1rem 1rem 2rem;
+
+    &__title {
+        color: $primary-text;
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+}

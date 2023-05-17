@@ -1,0 +1,71 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $component-background;
+    border-radius: 1rem;
+    background-color: $component-background;
+    padding: 2rem;
+    width: auto; 
+    max-width: 37rem;
+    flex-grow: 1;
+    padding: 2rem;
+    margin-right: 1.5rem;
+    min-height: 53rem;
+    max-height: 53rem;
+
+    &__message {
+        color: $primary-text;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 600;
+    }
+
+    &__timer {
+        color: $primary-text;
+        font-size: 8rem;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        margin: 4rem;
+    }
+
+    &__start-stop {
+        margin: 0 2rem; 
+        width: 8rem;
+        height: 4rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: $primary-button;
+        color: $secondary-component-background;
+        font-size: 1.2rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(246, 224, 147, 0.95);
+        }
+    }
+
+    &__reset {
+        margin: 0 2rem;
+        width: 8rem;
+        height: 4rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: $secondary-button;
+        color: $primary-text;
+        font-size: 1.2rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(77, 184, 241, 0.95);
+        }
+    }
+}

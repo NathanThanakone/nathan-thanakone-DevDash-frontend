@@ -1,0 +1,49 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.stats {
+    
+    &__subcontainer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__best-day {
+        border: 1px solid $primary-button;
+        border-radius: 1rem;
+        background-color: $primary-button;
+        padding: 1rem;
+        margin-right: 1.5rem;
+        min-width: 15rem;
+
+        &--text {
+            color: $secondary-component-background;
+            font-weight: 600;
+        }
+
+        &--value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $main-background;
+        }
+    }
+
+    &__daily-average {
+        border: 1px solid $tertiary-component-background;
+        border-radius: 1rem;
+        background-color: $tertiary-component-background;
+        padding: 1rem;
+        min-width: 15rem;
+
+        &--text {
+            color: $secondary-component-background;
+            font-weight: 600;
+        }
+
+        &--value {
+            font-size: 2rem;
+            font-weight: 600;
+            color: $secondary-button;
+        }
+    }
+}

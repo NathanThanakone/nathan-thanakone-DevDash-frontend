@@ -1,0 +1,65 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.complete {
+    text-decoration: line-through;
+    opacity: 0.35;
+}
+
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.25rem auto;
+    color: $primary-text;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    width: 90%;
+    background-color: $nth-child;
+    font-size: 1.2rem;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $nth-child-hover;
+    }
+
+    &:nth-child(4n + 1) {
+        background-color: $nth-child1;
+        
+        &:hover {
+            background-color: $nth-child-hover;
+        }
+    }
+
+    &:nth-child(4n + 2) {
+        background-color: $nth-child2;
+
+        &:hover {
+            background-color: $nth-child-hover;
+        }
+    }
+
+    &:nth-child(4n + 3) {
+        background-color: $nth-child3;
+
+        &:hover {
+            background-color: $nth-child-hover;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    &__edit-icon {
+        color: $primary-text;
+    }
+
+    &__delete-icon {
+        color: $primary-text;
+        margin-right: 0.5rem;
+    }
+}

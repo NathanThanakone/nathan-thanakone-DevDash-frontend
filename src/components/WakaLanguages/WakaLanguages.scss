@@ -1,0 +1,21 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.pie-chart {
+    height: 24rem;
+    width: 35rem;
+    background-color: $tertiary-component-background;
+    border-radius: 1rem;
+    padding: 1rem;
+
+    &__title {
+        color: $secondary-component-background;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__chart {
+        margin-left: 6rem;
+    }
+}

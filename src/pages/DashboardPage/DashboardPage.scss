@@ -1,0 +1,29 @@
+@use "../../styles/partials/colours" as *;
+@use "../../styles/partials/typography" as *;
+
+.dashboard {
+    background-color: $component-background;
+    height: 53rem;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+
+    &__container {
+        display: flex;
+    }
+
+    &__subcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__second-subcontainer {
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-left: 1.5rem;
+    }
+}
